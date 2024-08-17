@@ -13,8 +13,8 @@ signed main() {
 
         vector<int> a(n), b(n);
 
-        for (auto &val : a) cin >> val;
-        for (auto &val : b) cin >> val;
+        for (int i=0;i<n;i++) cin >> a[i];
+        for (int i=0;i<n;i++) cin >> b[i];
 
         int neutral = 0, positive = 0, negative = 0;
 

@@ -15,28 +15,35 @@ typedef long long ll;
 #define PI 3.141592653589793238462
 #define space cout << ' ';
 #define gcd(a, b) __gcd(a, b)
-#define int long long 
 
-signed main() {
+int  value ( int a , int b){
+    if( a == b) return 0 ;
+    else if(a > b) return 1;
+    else return -1 ;
+
+    
+}
+
+int main() {
     fio
     int t;
     cin >> t;
     while (t--) {
-int x, y , k;
-cin>>x>>y>>k;
-if(x+k < y) {
-    cout<< x+k <<endl;
-    continue;
-}
-long long result = 0;
-while ( k){
-    int curr= log( x) / log( y);
-   k-=x- y^curr;
-   int temp = x- y^curr;
-   x=log( x + temp ) / log( y);
-}
-cout<< x<<endl;
- 
-}
-return 0;
+
+int a1 , a2 , b1 , b2;
+int ans =0;
+cin>>a1>>a2>>b1>>b2;
+
+if( value(a1,b1) + value(a2,b2) > 0 ) ans++;
+if(   value(a2,b2)+ value(a1,b1) > 0 ) ans++;
+ if( value(a2, b1) + value(a1,b2) >0) ans++;
+
+ if( value(a2, b1) + value(a1,b2) >0) ans++;
+
+
+
+
+cout<< ans << endl;
+    }
+    return 0;
 }

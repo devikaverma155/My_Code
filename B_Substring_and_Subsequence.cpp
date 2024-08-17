@@ -8,19 +8,19 @@ void solve()
     string a,b;
     cin >> a >>b;
     int n = a.size(), m =b.size(), result = m;
-    for (int start = 0; start < m; start++)
+    for (int i = 0; i < m; i++)
     {
-        int curr = start, i2 = start;
-        for (int i1 = 0; i1 < n; i1++)
+        int curr = i, temp = i;
+        for (int j = 0; j < n; j++)
         {
-            if (a[i1] ==b[i2])
+            if (a[j] ==b[temp])
             {
-                i2++;
-                if (i2 == m)
+                temp++;
+                if (temp == m)
                     break;
             }
         }
-        result = min(result, curr + m - i2);
+        result = min(result, curr + m - temp);
     }
     cout << result + n << '\n';
 }

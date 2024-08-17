@@ -13,7 +13,7 @@ int main() {
         cin >> n >> k;
         
         vector<int> p(n);
-        iota(p.begin(), p.end(), 1); // Initialize p to [1, 2, ..., n]
+        iota(p.begin(), p.end(), 1); 
         
         int current_manhattan = 0;
         

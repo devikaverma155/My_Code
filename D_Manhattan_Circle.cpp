@@ -7,7 +7,7 @@ int main(){
     while (t--) {
         int n, m;
         cin >> n >> m;
-        
+          int srow = n, scol = m, erow = -1, ecol = -1;
         vector<vector<char>> hashes(n, vector<char>(m));
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -15,7 +15,7 @@ int main(){
             }
         }
 
-        int srow = n, scol = m, erow = -1, ecol = -1;
+      
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
